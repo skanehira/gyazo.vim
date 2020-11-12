@@ -30,8 +30,10 @@ function! gyazo#upload(...) abort
     return
   endif
 
-  if get(g:, 'gyazo_yank_as_markdown', 0)
+  if get(g:, 'gyazo_put_markdown_url', 0)
     let url = printf('![](%s)', url)
+    call setline('.', url)
+    return
   endif
   call s:yank(url)
   echom printf('yanked %s', url)
