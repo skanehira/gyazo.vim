@@ -18,23 +18,29 @@ function! s:err(msg) abort
 endfunction
 
 function! gyazo#upload(...) abort
-  if a:0 > 0
-    let url = printf('gyazo %s', a:1)->system()
-  else
-    let url = system('gyazo -c')
+  let to_insert = get(g:, 'gyazo_insert_markdown_url', 0)
+  let cmd = printf('gyazo')
+  if to_insert
+    let cmd = printf('gyazo -m')
   endif
 
-  let url = url->trim()
+  if a:0 > 0
+    let cmd = printf('%s %s', cmd, a:1)
+  else
+    let cmd = printf('%s -c', cmd)
+  endif
+  echom cmd
+
+  let url = system(cmd)->trim()
   if url !~? 'https:\/\/.*'
     call s:err(url)
     return
   endif
 
-  if get(g:, 'gyazo_insert_markdown_url', 0)
-    let url = printf('![](%s)', url)
+  if to_insert
     call setline('.', url)
-    return
+  else
+    call s:yank(url)
+    echom printf('yanked %s', url)
   endif
-  call s:yank(url)
-  echom printf('yanked %s', url)
 endfunction
