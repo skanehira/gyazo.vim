@@ -29,7 +29,6 @@ function! gyazo#upload(...) abort
   else
     let cmd = printf('%s -c', cmd)
   endif
-  echom cmd
 
   let url = system(cmd)->trim()
   if url !~? 'https:\/\/.*'
