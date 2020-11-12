@@ -30,7 +30,7 @@ function! gyazo#upload(...) abort
     return
   endif
 
-  if get(g:, 'gyazo_put_markdown_url', 0)
+  if get(g:, 'gyazo_insert_markdown_url', 0)
     let url = printf('![](%s)', url)
     call setline('.', url)
     return
