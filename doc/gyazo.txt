@@ -27,7 +27,8 @@ CONTENTS					*gyazo-contents*
 INTRODUCTION			|gyazo-introduction|
 USAGE				|gyazo-usage|
 INTERFACE			|gyazo-interface|
-  OPTIONS			  *gyazo-options*
+  VARIABLES			  |gyazo-variables|
+  KEY-MAPPINGS			  |gyazo-key-mappings|
   COMMANDS			  |gyazo-commands|
   FUNCTIONS			  |gyazo-functions|
 TODO				|gyazo-todo|
@@ -52,7 +53,7 @@ USAGE						*gyazo-usage*
 INTERFACE					*gyazo-interface*
 
 ------------------------------------------------------------------------------
-OPTIONS						*gyazo-options*
+VARIABLES					*gyazo-variables*
 
 g:gyazo_insert_markdown_url			*g:gyazo_insert_markdown_url*
 	Upload image and insert markdown link to current line.
@@ -64,6 +65,12 @@ COMMANDS					*gyazo-commands*
 	Upload image to Gyazo.
 	If [file] is specified, that will be upload.
 	If not specified, will upload image from clipboard.
+
+KEY-MAPPINGS					*gyazo-key-mappings*
+
+<Plug>(gyazo-upload)				*<Plug>(gyazo-upload)*
+	Upload image to Gyazo.
+	This just Call :GyazoUpload
 
 ------------------------------------------------------------------------------
 FUNCTIONS					*gyazo-functions*
