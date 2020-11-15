@@ -3,7 +3,7 @@
 " License: MIT
 
 let s:yank_reg = '*'
-if has('linux')
+if has('linux') || has('unix')
   let s:yank_reg = '+'
 endif
 
@@ -30,7 +30,7 @@ function! gyazo#upload(...) abort
     let cmd = printf('%s -c', cmd)
   endif
 
-  let url = system(cmd)->trim()
+  let url = trim(system(cmd))
   if url !~? 'https:\/\/.*'
     call s:err(url)
     return
