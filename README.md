@@ -1,5 +1,5 @@
 # gyazo.vim
-Vim plugin for Gyazo
+Vim/Neovim plugin for Gyazo
 
 ![](https://i.gyazo.com/2adcdcc57f144bd524bc29bd1affbe75.gif)
 

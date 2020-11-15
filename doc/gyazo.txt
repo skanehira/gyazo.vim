@@ -1,4 +1,4 @@
-*gyazo.txt*	Vim plugin for Gyazo
+*gyazo.txt*	Vim/Neovim plugin for Gyazo
 
 Author: skanehira <sho19921005@gmail.com>
 License : MIT license  {{{
@@ -38,7 +38,7 @@ CHANGELOG			|gyazo-changelog|
 ==============================================================================
 INTRODUCTION					*gyazo-introduction*
 
-*gyazo* is a Vim plugin for Gyazo
+*gyazo* is a Vim/Neovim plugin for Gyazo
 
 Latest version:
 https://github.com/skanehira/gyazo.vim
