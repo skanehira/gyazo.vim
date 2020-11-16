@@ -26,6 +26,12 @@ Vim/Neovim plugin for Gyazo
 :GyazoUpload
 ```
 
+## Key map
+
+| Key map                | Description           |
+|------------------------|-----------------------|
+| `<Plug>(gyazo-upload)` | Upload image to Gyazo |
+
 ## Options
 
 | options                     | description                          |
